@@ -1,0 +1,253 @@
+# include <iostream>
+#include <cmath>
+using namespace std;
+
+
+void charlesLawV1()
+{ double V1,V2,T1,T2;
+	 cout<< "Enter V2 :"<< endl;
+	 cin>>V2;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter T2 :"<< endl;
+	cin>>T2;
+	V1=(V2*T1)/T2;
+	cout<<"V1 ="<<V1;
+}
+
+void charlesLawV2()
+{ double V1,V2,T1,T2;
+	 cout<< "Enter V1 :"<< endl;
+	 cin>>V1;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter T2 :"<< endl;
+	cin>>T2;
+	V2=(V1*T2)/T1;
+	cout<<"V2 ="<<V2;
+}
+void charlesLawT1()
+{ double V1,V2,T1,T2;
+	 cout<< "Enter V1 :"<< endl;
+	 cin>>V1;
+	 cout<< "Enter V2 :"<< endl;
+	 cin>>V2;
+	 cout<< "Enter T2 :"<< endl;
+	cin>>T2;
+	T1=(V1*T2)/V2;
+	cout<<"T1="<<T1;
+}
+
+void charlesLawT2()
+{ double V1,V2,T1,T2;
+	 cout<< "Enter V2 :"<< endl;
+	 cin>>V2;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter V1 :"<< endl;
+	cin>>V1;
+	T2=(V2*T1)/V1;
+	cout<<"T2="<<T2;
+}
+
+
+void BoyleLawV1()
+{ double V1,V2,P1,P2;
+	 cout<< "Enter V2 :"<< endl;
+	 cin>>V2;
+	 cout<< "Enter P1 :"<< endl;
+	 cin>>P1;
+	 cout<< "Enter P2 :"<< endl;
+	cin>>P2;
+	V1=(V2*P1)/P2;
+	cout<<"V1 ="<<V1;
+}
+
+void BoyleLawV2()
+{ double V1,V2,P1,P2;
+	 cout<< "Enter V1 :"<< endl;
+	 cin>>V1;
+	 cout<< "Enter P1 :"<< endl;
+	 cin>>P1;
+	 cout<< "Enter P2 :"<< endl;
+	cin>>P2;
+	V2=(V1*P1)/P2;
+	cout<<"V2 ="<<V2;
+}
+void BoyleLawP1()
+{ double V1,V2,P1,P2;
+	 cout<< "Enter V2 :"<< endl;
+	 cin>>V2;
+	 cout<< "Enter P2 :"<< endl;
+	 cin>>P2;
+	 cout<< "Enter V1 :"<< endl;
+	cin>>V1;
+	P1=(V2*P2)/V1;
+	cout<<"P1="<<P1;
+}
+
+void BoyleLawP2()
+{ double V1,V2,P1,P2;
+	 cout<< "Enter V1 :"<< endl;
+	 cin>>V1;
+	 cout<< "Enter P1 :"<< endl;
+	 cin>>P1;
+	 cout<< "Enter V2 :"<< endl;
+	cin>>V2;
+	P2=(V1*P1)/V2;
+	cout<<"P2="<<P2;
+}
+
+double Gas_IussacLawT1()
+{double T1,T2,P1,P2;
+	 cout<< "Enter T2 :"<< endl;
+	 cin>>T2;
+	 cout<< "Enter P1 :"<< endl;
+	 cin>>P1;
+	 cout<< "Enter P2 :"<< endl;
+	cin>>P2;
+	T1=(P1*T2)/P2;
+	return T1;
+	
+}
+
+double Gas_IussacLawT2()
+{double T1,T2,P1,P2;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter P1 :"<< endl;
+	 cin>>P1;
+	 cout<< "Enter P2 :"<< endl;
+	cin>>P2;
+	T2=(P2*T1)/P1;
+	return T2;
+	
+}
+
+double Gas_IussacLawP1()
+{double T1,T2,P1,P2;;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter T2 :"<< endl;
+	 cin>>T2;
+	 cout<< "Enter P2 :"<< endl;
+	cin>>P2;
+	P1=(P2*T1)/T2;
+	return P1;
+	
+}
+
+double Gas_IussacLawP2()
+{double T1,T2,P1,P2;;
+	 cout<< "Enter T1 :"<< endl;
+	 cin>>T1;
+	 cout<< "Enter T2 :"<< endl;
+	 cin>>T2;
+	 cout<< "Enter P1 :"<< endl;
+	cin>>P1;
+	P2=(P1*T2)/T1;
+	return P1;
+	
+}
+
+int main()
+{ int x;
+   double mass ;
+   double velocity ;  
+
+	 do{
+	 
+	  cout<< "------------------Welcome------------------"<< endl;
+	  cout<< "Choose form the Following otpions  or 0 to exit  "<< endl;
+	   cout<< "1- Kinetic energy law "<< endl;
+	   cout<< "2- Ideal gases law  "<< endl;
+	   cin>> x;
+       if (x==1)
+       { 
+        cout<< "Enter mass value :" ;
+        cin>>mass;
+         cout<< "Enter velocity value :";
+         cin>> velocity;
+       	double k =0.5*mass*pow(velocity,2);
+       	cout<<"kinetic energy ="<<k<<endl;
+       }
+       	else if (x==2)
+       	{
+       		int choice;
+       		 
+       		 cout<< "1 -Chalres law "<< endl;
+	         cout<< "2- Boyle law  "<< endl;
+	         cout<< "3- Gas-Iussac law  "<< endl;
+	         cin>>choice;
+	         if(choice==1)
+	         { 
+	         	int y;
+	         	cout<< "1-V1"<< endl;
+	            cout<< "2-V2"<< endl;
+	            cout<< "3-T1"<< endl;
+	            cout<< "4-T2"<< endl;
+	            cin>>y;
+	            switch(y)
+				{
+					case 1:charlesLawV1(); break;
+					case 2:charlesLawV2(); break;
+					case 3:charlesLawT1(); break;
+					case 4:charlesLawT2(); break;
+					default:cout<<"Invalid input"<<endl;
+					
+				}
+	        
+			 }
+			 else if(choice==2)
+			 {
+			 	int y;
+	         	cout<< "1-V1"<< endl;
+	            cout<< "2-V2"<< endl;
+	            cout<< "3-P1"<< endl;
+	            cout<< "4-P2"<< endl;
+	            cin>>y;
+			 	 switch(y)
+				{
+					case 1:BoyleLawV1(); break;
+					case 2:BoyleLawV2(); break;
+					case 3:BoyleLawP1(); break;
+					case 4:BoyleLawP2(); break;
+					default:cout<<"Invalid input"<<endl;
+					
+				}
+			 	
+			 }
+			 else if (choice==3)
+			 {
+			 		int y;
+	         	cout<< "1-T1"<< endl;
+	            cout<< "2-T2"<< endl;
+	            cout<< "3-P1"<< endl;
+	            cout<< "4-P2"<< endl;
+	            cin>>y;
+			 	 switch(y)
+				{ double T1,T2,P1,P2;
+					case 1:T1 =Gas_IussacLawT1();
+					        cout<<"T1= "<<T1<<endl;
+					        break;
+					case 2: T2 =Gas_IussacLawT2();
+					        cout<<"T2= "<<T2<<endl;
+					        break;
+					case 3: P1 =Gas_IussacLawP1();
+					 cout<<"P1= "<<P1<<endl;
+					        break;
+					case 4: P2 =Gas_IussacLawP2(); 
+					 cout<<"P2= "<<P2<<endl;
+					        break;
+					default:cout<<"Invalid input"<<endl;
+					
+				}
+			 	
+			 }
+       		
+       		
+		}
+	 	
+	 }while (x!=0);
+
+}
